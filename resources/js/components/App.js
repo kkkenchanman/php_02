@@ -7,11 +7,12 @@ const App = () => {
 
     return (
       <section>
-        <h1>aaaaaaaaaaa</h1>
+        <h1>SportsYukigassenMedia</h1>
         <div>
           <Form />
         </div>
         <div>
+            <h2>Content</h2>
             <ul>
               <Article/>
             </ul>

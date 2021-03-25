@@ -8,24 +8,24 @@ const Form = () => {
   const [postTitle, setPostTitle] = useState('')
   const [postCategory, setPostCategory] = useState('')
   const [postContent, setPostContent] = useState('')
-  const [tournamentName, setTournamentName] = useState('')
-  const [myTeamName, setMyTeamName] = useState('')
-  const [opponentTeamName, setOpponentTeamName] = useState('')
-  const [firstSetMyCount, setFirstSetMyCount] = useState('')
-  const [firstSetOpponentCount, setFirstSetOpponentCount] = useState('')
-  const [secondSetMyCount, setSecondSetMyCount] = useState('')
-  const [secondSetOpponentCount, setSecondSetOpponentCount] = useState('')
-  const [thirdSetMyCount, setThirdSetMyCount] = useState('')
-  const [thirdSetOpponentCount, setThirdSetOpponentCount] = useState('')
-  const [victoryThrowMyCount, setVictoryThrowMyCount] = useState('')
-  const [victoryThrowOpponentCount, setVictoryThrowOpponentCount] = useState('')
-  const [totalMyCount, setTotalMyCount] = useState('')
-  const [totalOpponentCount, setTotalOpponentCount] = useState('')
+  // const [tournamentName, setTournamentName] = useState('')
+  // const [myTeamName, setMyTeamName] = useState('')
+  // const [opponentTeamName, setOpponentTeamName] = useState('')
+  // const [firstSetMyCount, setFirstSetMyCount] = useState('')
+  // const [firstSetOpponentCount, setFirstSetOpponentCount] = useState('')
+  // const [secondSetMyCount, setSecondSetMyCount] = useState('')
+  // const [secondSetOpponentCount, setSecondSetOpponentCount] = useState('')
+  // const [thirdSetMyCount, setThirdSetMyCount] = useState('')
+  // const [thirdSetOpponentCount, setThirdSetOpponentCount] = useState('')
+  // const [victoryThrowMyCount, setVictoryThrowMyCount] = useState('')
+  // const [victoryThrowOpponentCount, setVictoryThrowOpponentCount] = useState('')
+  // const [totalMyCount, setTotalMyCount] = useState('')
+  // const [totalOpponentCount, setTotalOpponentCount] = useState('')
 
-  useEffect(() => {
-    myTotal();
-    OpponentTotal();
-  })
+  // useEffect(() => {
+  //   myTotal();
+  //   OpponentTotal();
+  // })
 
   const inputChange = (event) => {
     switch(event.target.name){
@@ -44,80 +44,80 @@ const Form = () => {
           event.target.value
         )
         break;
-      case 'tournamentName':
-        setTournamentName(
-          event.target.value
-        )
-        break;
-      case 'myTameName':
-        setMyTeamName(
-          event.target.value
-        )
-        break;
-      case 'opponentTameName':
-        setOpponentTeamName(
-          event.target.value
-        )
-        break;        
+      // case 'tournamentName':
+      //   setTournamentName(
+      //     event.target.value
+      //   )
+      //   break;
+      // case 'myTameName':
+      //   setMyTeamName(
+      //     event.target.value
+      //   )
+      //   break;
+      // case 'opponentTameName':
+      //   setOpponentTeamName(
+      //     event.target.value
+      //   )
+      //   break;        
       default:
         break;
     }
   }
 
-  const myTotal = () => {
-    setTotalMyCount(Number(firstSetMyCount) + Number(secondSetMyCount) + Number(thirdSetMyCount))
-  }
+  // const myTotal = () => {
+  //   setTotalMyCount(Number(firstSetMyCount) + Number(secondSetMyCount) + Number(thirdSetMyCount))
+  // }
 
-  const OpponentTotal = () => {
-    setTotalOpponentCount(Number(firstSetOpponentCount) + Number(secondSetOpponentCount) + Number(thirdSetOpponentCount))
-  }
+  // const OpponentTotal = () => {
+  //   setTotalOpponentCount(Number(firstSetOpponentCount) + Number(secondSetOpponentCount) + Number(thirdSetOpponentCount))
+  // }
 
-  const selectChange = (event) => {
-    switch(event.target.name){
-      case 'firstSetMyCount':
-        setFirstSetMyCount(
-          event.target.value
-        )
-        break;
-      case 'firstSetOpponentCount':
-        setFirstSetOpponentCount(
-          event.target.value
-        )
-        break;
-      case 'secondSetMyCount':
-        setSecondSetMyCount(
-           event.target.value
-        )
-        break;
-      case 'secondSetOpponentCount':
-        setSecondSetOpponentCount(
-          event.target.value
-        )
-        break;
-      case 'thirdSetMyCount':
-        setThirdSetMyCount(
-           event.target.value
-        )
-        break;
-      case 'thirdSetOpponentCount':
-        setThirdSetOpponentCount(
-          event.target.value
-        )
-        break;
-      case 'victoryThrowMyCount':
-        setVictoryThrowMyCount(
-           event.target.value
-        )
-        break;
-      case 'victoryThrowOpponentCount':
-        setVictoryThrowOpponentCount(
-          event.target.value
-        )
-        break;
-      default:
-        break;
-    }
-  }
+  // const selectChange = (event) => {
+  //   switch(event.target.name){
+  //     case 'firstSetMyCount':
+  //       setFirstSetMyCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'firstSetOpponentCount':
+  //       setFirstSetOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'secondSetMyCount':
+  //       setSecondSetMyCount(
+  //          event.target.value
+  //       )
+  //       break;
+  //     case 'secondSetOpponentCount':
+  //       setSecondSetOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'thirdSetMyCount':
+  //       setThirdSetMyCount(
+  //          event.target.value
+  //       )
+  //       break;
+  //     case 'thirdSetOpponentCount':
+  //       setThirdSetOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'victoryThrowMyCount':
+  //       setVictoryThrowMyCount(
+  //          event.target.value
+  //       )
+  //       break;
+  //     case 'victoryThrowOpponentCount':
+  //       setVictoryThrowOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // }
 
   const submit = () => {
     if(postTitle === '' || postCategory === '' || postContent === ''){
@@ -146,9 +146,9 @@ const Form = () => {
         <p>カテゴリー</p>
         <input type='text' name='postCategory' value={postCategory} onChange={inputChange}/>
         <p>内容</p>
-        <input type='text' name='postContent' value={postContent} onChange={inputChange}/>
+        <textarea type='text' name='postContent' value={postContent} onChange={inputChange}/>
         
-        <div><input type='text' name='tournamentName' value={tournamentName} onChange={inputChange}/></div>
+        {/* <div><input type='text' name='tournamentName' value={tournamentName} onChange={inputChange}/></div>
         <table>
           <thead>
             <tr>
@@ -184,7 +184,7 @@ const Form = () => {
             <td>{totalOpponentCount}</td>
           </tr>
           </tbody>
-        </table>
+        </table> */}
         <button onClick={submit}>送信</button>
       
     </React.Fragment>

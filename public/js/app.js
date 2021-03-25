@@ -1938,13 +1938,15 @@ __webpack_require__.r(__webpack_exports__);
 var App = function App() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
-      children: "aaaaaaaaaaa"
+      children: "SportsYukigassenMedia"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Form_js__WEBPACK_IMPORTED_MODULE_3__.default, {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("ul", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+        children: "Content"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("ul", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Article__WEBPACK_IMPORTED_MODULE_2__.default, {})
-      })
+      })]
     })]
   });
 };
@@ -1998,6 +2000,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Article = function Article() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -2006,7 +2009,7 @@ var Article = function Article() {
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     getArticle();
-  }, []);
+  });
 
   var getArticle = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -2035,11 +2038,18 @@ var Article = function Article() {
     };
   }();
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("ul", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: articles.map(function (article) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
-        children: article.title
-      }, article.id);
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        "class": "contentContainer",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+          children: article.title
+        }, article.id), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+          children: article.category
+        }, article.id), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+          children: article.content
+        }, article.id)]
+      });
     })
   });
 };
@@ -2148,77 +2158,24 @@ var Form = function Form() {
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState6 = _slicedToArray(_useState5, 2),
       postContent = _useState6[0],
-      setPostContent = _useState6[1];
+      setPostContent = _useState6[1]; // const [tournamentName, setTournamentName] = useState('')
+  // const [myTeamName, setMyTeamName] = useState('')
+  // const [opponentTeamName, setOpponentTeamName] = useState('')
+  // const [firstSetMyCount, setFirstSetMyCount] = useState('')
+  // const [firstSetOpponentCount, setFirstSetOpponentCount] = useState('')
+  // const [secondSetMyCount, setSecondSetMyCount] = useState('')
+  // const [secondSetOpponentCount, setSecondSetOpponentCount] = useState('')
+  // const [thirdSetMyCount, setThirdSetMyCount] = useState('')
+  // const [thirdSetOpponentCount, setThirdSetOpponentCount] = useState('')
+  // const [victoryThrowMyCount, setVictoryThrowMyCount] = useState('')
+  // const [victoryThrowOpponentCount, setVictoryThrowOpponentCount] = useState('')
+  // const [totalMyCount, setTotalMyCount] = useState('')
+  // const [totalOpponentCount, setTotalOpponentCount] = useState('')
+  // useEffect(() => {
+  //   myTotal();
+  //   OpponentTotal();
+  // })
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState8 = _slicedToArray(_useState7, 2),
-      tournamentName = _useState8[0],
-      setTournamentName = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState10 = _slicedToArray(_useState9, 2),
-      myTeamName = _useState10[0],
-      setMyTeamName = _useState10[1];
-
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState12 = _slicedToArray(_useState11, 2),
-      opponentTeamName = _useState12[0],
-      setOpponentTeamName = _useState12[1];
-
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState14 = _slicedToArray(_useState13, 2),
-      firstSetMyCount = _useState14[0],
-      setFirstSetMyCount = _useState14[1];
-
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState16 = _slicedToArray(_useState15, 2),
-      firstSetOpponentCount = _useState16[0],
-      setFirstSetOpponentCount = _useState16[1];
-
-  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState18 = _slicedToArray(_useState17, 2),
-      secondSetMyCount = _useState18[0],
-      setSecondSetMyCount = _useState18[1];
-
-  var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState20 = _slicedToArray(_useState19, 2),
-      secondSetOpponentCount = _useState20[0],
-      setSecondSetOpponentCount = _useState20[1];
-
-  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState22 = _slicedToArray(_useState21, 2),
-      thirdSetMyCount = _useState22[0],
-      setThirdSetMyCount = _useState22[1];
-
-  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState24 = _slicedToArray(_useState23, 2),
-      thirdSetOpponentCount = _useState24[0],
-      setThirdSetOpponentCount = _useState24[1];
-
-  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState26 = _slicedToArray(_useState25, 2),
-      victoryThrowMyCount = _useState26[0],
-      setVictoryThrowMyCount = _useState26[1];
-
-  var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState28 = _slicedToArray(_useState27, 2),
-      victoryThrowOpponentCount = _useState28[0],
-      setVictoryThrowOpponentCount = _useState28[1];
-
-  var _useState29 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState30 = _slicedToArray(_useState29, 2),
-      totalMyCount = _useState30[0],
-      setTotalMyCount = _useState30[1];
-
-  var _useState31 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState32 = _slicedToArray(_useState31, 2),
-      totalOpponentCount = _useState32[0],
-      setTotalOpponentCount = _useState32[1];
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    myTotal();
-    OpponentTotal();
-  });
 
   var inputChange = function inputChange(event) {
     switch (event.target.name) {
@@ -2233,70 +2190,78 @@ var Form = function Form() {
       case 'postContent':
         setPostContent(event.target.value);
         break;
-
-      case 'tournamentName':
-        setTournamentName(event.target.value);
-        break;
-
-      case 'myTameName':
-        setMyTeamName(event.target.value);
-        break;
-
-      case 'opponentTameName':
-        setOpponentTeamName(event.target.value);
-        break;
-
-      default:
-        break;
-    }
-  };
-
-  var myTotal = function myTotal() {
-    setTotalMyCount(Number(firstSetMyCount) + Number(secondSetMyCount) + Number(thirdSetMyCount));
-  };
-
-  var OpponentTotal = function OpponentTotal() {
-    setTotalOpponentCount(Number(firstSetOpponentCount) + Number(secondSetOpponentCount) + Number(thirdSetOpponentCount));
-  };
-
-  var selectChange = function selectChange(event) {
-    switch (event.target.name) {
-      case 'firstSetMyCount':
-        setFirstSetMyCount(event.target.value);
-        break;
-
-      case 'firstSetOpponentCount':
-        setFirstSetOpponentCount(event.target.value);
-        break;
-
-      case 'secondSetMyCount':
-        setSecondSetMyCount(event.target.value);
-        break;
-
-      case 'secondSetOpponentCount':
-        setSecondSetOpponentCount(event.target.value);
-        break;
-
-      case 'thirdSetMyCount':
-        setThirdSetMyCount(event.target.value);
-        break;
-
-      case 'thirdSetOpponentCount':
-        setThirdSetOpponentCount(event.target.value);
-        break;
-
-      case 'victoryThrowMyCount':
-        setVictoryThrowMyCount(event.target.value);
-        break;
-
-      case 'victoryThrowOpponentCount':
-        setVictoryThrowOpponentCount(event.target.value);
-        break;
+      // case 'tournamentName':
+      //   setTournamentName(
+      //     event.target.value
+      //   )
+      //   break;
+      // case 'myTameName':
+      //   setMyTeamName(
+      //     event.target.value
+      //   )
+      //   break;
+      // case 'opponentTameName':
+      //   setOpponentTeamName(
+      //     event.target.value
+      //   )
+      //   break;        
 
       default:
         break;
     }
-  };
+  }; // const myTotal = () => {
+  //   setTotalMyCount(Number(firstSetMyCount) + Number(secondSetMyCount) + Number(thirdSetMyCount))
+  // }
+  // const OpponentTotal = () => {
+  //   setTotalOpponentCount(Number(firstSetOpponentCount) + Number(secondSetOpponentCount) + Number(thirdSetOpponentCount))
+  // }
+  // const selectChange = (event) => {
+  //   switch(event.target.name){
+  //     case 'firstSetMyCount':
+  //       setFirstSetMyCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'firstSetOpponentCount':
+  //       setFirstSetOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'secondSetMyCount':
+  //       setSecondSetMyCount(
+  //          event.target.value
+  //       )
+  //       break;
+  //     case 'secondSetOpponentCount':
+  //       setSecondSetOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'thirdSetMyCount':
+  //       setThirdSetMyCount(
+  //          event.target.value
+  //       )
+  //       break;
+  //     case 'thirdSetOpponentCount':
+  //       setThirdSetOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     case 'victoryThrowMyCount':
+  //       setVictoryThrowMyCount(
+  //          event.target.value
+  //       )
+  //       break;
+  //     case 'victoryThrowOpponentCount':
+  //       setVictoryThrowOpponentCount(
+  //         event.target.value
+  //       )
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // }
+
 
   var submit = function submit() {
     if (postTitle === '' || postCategory === '' || postContent === '') {
@@ -2333,106 +2298,11 @@ var Form = function Form() {
       onChange: inputChange
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
       children: "\u5185\u5BB9"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("textarea", {
       type: "text",
       name: "postContent",
       value: postContent,
       onChange: inputChange
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
-        type: "text",
-        name: "tournamentName",
-        value: tournamentName,
-        onChange: inputChange
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("table", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("thead", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
-              type: "text",
-              name: "myTeamName",
-              value: myTeamName,
-              onChange: inputChange
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
-            children: "VS"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
-              type: "text",
-              name: "opponentTeamName",
-              value: opponentTeamName,
-              onChange: inputChange
-            })
-          })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tbody", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "firstSetMyCount",
-              onChange: selectChange
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: "FIRST SET"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "firstSetOpponentCount",
-              onChange: selectChange
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "secondSetMyCount",
-              onChange: selectChange
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: "SECOND SET"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "secondSetOpponentCount",
-              onChange: selectChange
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "thirdSetMyCount",
-              onChange: selectChange
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: "THIRD SET"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "thirdSetOpponentCount",
-              onChange: selectChange
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "victoryThrowMyCount",
-              onChange: selectChange
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: "VICTORY THROW"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Count__WEBPACK_IMPORTED_MODULE_2__.default, {
-              name: "victoryThrowOpponentCount",
-              onChange: selectChange
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: totalMyCount
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: "TOTAL SET"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-            children: totalOpponentCount
-          })]
-        })]
-      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
       onClick: submit,
       children: "\u9001\u4FE1"

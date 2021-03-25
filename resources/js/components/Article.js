@@ -10,7 +10,7 @@ const Article = () => {
 
   useEffect(() => {
       getArticle()
-  },[])
+  })
 
   const getArticle = async () => {
       const response = await axios.get('/api/getArticle');
@@ -18,9 +18,18 @@ const Article = () => {
   }
 
   return (
-    <ul>
-      {articles.map((article) => <li key={article.id}>{article.title}</li>)}
-    </ul>
+    <React.Fragment>
+      {articles.map((article) => 
+        <div class='contentContainer'>
+          <h2 key={article.id}>{article.title}</h2>
+          <p key={article.id}>{article.category}</p>
+          <p key={article.id}>{article.content}</p>
+        </div>
+
+      )}
+    </React.Fragment>
+
+    
   );
 }
 
